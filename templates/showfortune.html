@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>magic8ball</title>
+    <style>
+        html,body {
+            height: 100%;
+            margin:0;
+        }
+        .background {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-position: center;
+            background-repeat: no-repeat;
+}
+
+.background > h4 {
+    color: #fff;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+        .tryAgain {
+            position: fixed;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+
+    <script type = "text/JavaScript">
+         function EventHandler() {
+            alert("Try again for your fortune");
+         }
+      </script>
+
+</head>
+<body>
+{% load static %}
+
+<div class = "background" style = "background-image: url({% static "ball.png" %});">
+  <h4 onmouseover="EventHandler();">{{result}}</h4>
+  </div>
+<button class="tryAgain" onclick="window.location.reload();">try again</button>
+
+</body>
+</html>
