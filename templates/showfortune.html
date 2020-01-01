@@ -27,7 +27,7 @@
     font-family: sans-serif;
 }
         .tryAgain {
-            position: fixed;
+            position: relative;
             top: 50px;
             left: 50px;
         }
@@ -45,8 +45,9 @@
 
 <div class = "background" style = "background-image: url({% static "ball.png" %});">
   <h4 onmouseover="EventHandler();">{{result}}</h4>
+  <button class="tryAgain" onclick="window.location.reload();">try again</button>
   </div>
-<button class="tryAgain" onclick="window.location.reload();">try again</button>
+
 
 </body>
 </html>
