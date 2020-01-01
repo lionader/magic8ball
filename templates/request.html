@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+        html,body {
+            height: 100%;
+            margin:0;
+        }
+        .background {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-position: center;
+            background-repeat: no-repeat;
+}
+
+.background > h4 {
+    color: #fff;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+        .tryAgain {
+            position: absolute;
+            bottom: 12%;
+            left: calc(50% - 35px);
+            width:70px;
+        }
+    </style>
+
 <head>
     <meta charset="UTF-8">
     <title>Nader's magic8ball</title>
 </head>
 <body>
 
-Ask a question Click to see your fortune </br>
-<a href="fortune">
-    <button>ask me a Question and get your answer </button>
-</a>
+{% load static %}
+
+<div class = "background" style = "background-image: url({% static "ball.png" %});">
+     <br>
+    <a href="fortune">
+    <button class="tryAgain" onclick="window.location.reload();">Ask your Question</button>
+    </a>
+    </div>
 
 </body>
 </html>
