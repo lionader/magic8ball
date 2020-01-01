@@ -25,7 +25,7 @@ SECRET_KEY = '+0=l_m^n(jcd*w4^eg3e+egkr&_*eaycv58sj6v*yer!8v4+*e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['redan.pythonanywhere.com']
 
 
 # Application definition
