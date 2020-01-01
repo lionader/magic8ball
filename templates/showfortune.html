@@ -33,19 +33,14 @@
         }
     </style>
 
-    <script type = "text/JavaScript">
-         function EventHandler() {
-            alert("Try again for your fortune");
-         }
-      </script>
-
-</head>
+    </head>
 <body>
 {% load static %}
 
 <div class = "background" style = "background-image: url({% static "ball.png" %});">
-  <h4 onmouseover="EventHandler();">{{result}}</h4>
-  <button class="tryAgain" onclick="window.location.reload();">try again</button>
+    <h4>{{result}}</h4> 
+    <br>
+    <button class="tryAgain" onclick="window.location.reload();">try again</button>
   </div>
 
 
